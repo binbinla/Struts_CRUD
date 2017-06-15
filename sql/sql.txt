@@ -1,0 +1,2 @@
+create table admin(Admin_id varchar(10)	primary	key,Admin_password varchar(20),Admin_name varchar(20),Admin_phone varchar(15));
+create table users(User_id varchar(10) primary key,User_password varchar(20),nickname varchar(20),User_phone varchar(15));

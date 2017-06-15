@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="default" namespace="/" extends="struts-default">
+    
+        <action name="userlogin" class="com.structs.action.UserLoginAction" method="userlogin">
+            <result name="success">/UpdateUser.jsp</result>
+            <result name="User_password_error">/passwordError.jsp</result>
+   			<result name="User_id_error">/idError.jsp</result>
+        </action>
+        
+         <action name="adminlogin" class="com.structs.action.AdminLoginAction" method="adminlogin">
+            <result name="success">/AdminLogin.jsp</result>
+            <result name="Admin_password_error">/passwordError.jsp</result>
+   			<result name="Admin_id_error">/idError.jsp</result>
+        </action>
+        
+         <action name="register" class="com.structs.action.RegisterAction" method="executeRe">
+            <result name="success">/RegisterSuccess.jsp</result>
+            <result name="null_error">/nullerror.jsp</result>
+            <result name="register_fail">/RegisterFail.jsp</result>            
+        </action>
+        
+         <action name="update" class="com.structs.action.UpdateAction" method="executeUp">
+            <result name="success">/UpdateSuccess.jsp</result>
+            <result name="null_error">/nullerror.jsp</result>
+            <result name="update_fail">/UpdateFail.jsp</result>
+        </action>
+        
+        <action name="delete" class="com.structs.action.DeleteAction" method="executeDe">
+            <result name="success">/DeleteSuccess.jsp</result>
+            <result name="delete_fail">/DeleteFail.jsp</result>
+        </action>
+    </package>
+</struts>
